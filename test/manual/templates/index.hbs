@@ -1,0 +1,43 @@
+{{> top title="restart.css tests"}}
+
+    <div class="Test">
+
+      <h1 class="Test-title">restart.css tests</h1>
+
+      <h2 class="Test-describe">Base</h2>
+      <h3 class="Test-it">All elements should have their margins, paddings and borders reset to 0</h3>
+      <div class="Test-run">
+        <div><code>div</code></div>
+        <p><code>p</code></p>
+      </div>
+      <h3 class="Test-it">`html` should have line height reset to 1</h3>
+      <div class="Test-run">
+      </div>
+
+      <h2 class="Test-describe">Input</h2>
+      <h3 class="Test-it"><code>input</code> elements should have their borders left to default values</h3>
+      <div class="Test-run">
+        <input type="text" />
+        <input type="radio" />
+        <input type="checkbox" />
+        <input type="range" />
+      </div>
+
+      <h2 class="Test-describe">List</h2>
+      <h3 class="Test-it"><code>ul</code> and <code>ol</code> shouldn’t have any bullets</h3>
+      <div class="Test-run">
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+        <ol>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ol>
+      </div>
+
+    </div>
+
+{{> bottom}}
