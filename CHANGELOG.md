@@ -4,4 +4,4 @@
 
 ### Added
 
-- Initial implementation
+- New build, relese and usage process
