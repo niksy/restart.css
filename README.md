@@ -13,7 +13,7 @@ Goes best with screen display. Print display may (drastically) vary.
 
 * "Carpet bombing" of all margins, paddings and borders on elements
 * Borders are left on input elements so you can adjust them accordingly
-* …
+* […and much more](https://github.com/niksy/restart.css/blob/master/index.css)
 
 ## Install
 
