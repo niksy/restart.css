@@ -1,4 +1,7 @@
-/*! restart.css 1.0.1 - Reset styles globally. | Author: Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/), 2015 | License: MIT */
+/**
+ * Reset styling for all elements.
+ */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
 a, abbr, acronym, address, big, cite, code,
@@ -10,11 +13,11 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 button, textarea, select,
 article, aside, figure, footer, header, main,
-hgroup, menu, nav, section, menu,
+hgroup, menu, nav, section,
 time, mark, audio, video {
-	margin:0;
-	padding:0;
-	border:0;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 /**
@@ -25,21 +28,24 @@ time, mark, audio, video {
  *
  * Be sure to change it for your project-specific styles!
  */
+
 input {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 /**
  * Reset leading for `html`.
  */
+
 html {
-	line-height:1;
+	line-height: 1;
 }
 
 /**
  * Remove styling for lists.
  */
+
 ol, ul, li {
-	list-style:none;
+	list-style: none;
 }

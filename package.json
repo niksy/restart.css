@@ -2,45 +2,69 @@
   "name": "restart.css",
   "version": "1.0.1",
   "description": "Reset styles globally.",
-  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "main": "index.css",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
   "license": "MIT",
-  "main": "lib/index.css",
-  "style": "lib/index.css",
-  "scripts": {
-    "test": "grunt test --watch",
-    "version": "grunt update_json && grunt build && git add -A",
-    "publish": "git push && git push --tags"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^2.2.0",
-    "grunt-cli": "^0.1.13",
-    "grunt-compile-handlebars": "^1.0.1",
-    "grunt-concurrent": "^1.0.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-connect": "^0.9.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-update-json": "^0.2.1",
-    "load-grunt-tasks": "^3.1.0",
-    "suitcss-components-test": "^0.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/niksy/restart.css.git"
-  },
-  "keywords": [
-    "reset",
-    "restart",
-    "css"
+  "files": [
+    "index.css",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
   ],
-  "bugs": {
-    "url": "https://github.com/niksy/restart.css/issues"
-  },
-  "homepage": "https://github.com/niksy/restart.css",
+  "style": "index.css",
   "directories": {
     "test": "test"
   },
-  "dependencies": {}
+  "scripts": {
+    "lint": "stylelint 'index.css'",
+    "release": "np",
+    "test": "npm run lint",
+    "test:generate-static-site": "webpack --config ./test/manual/webpack.config.js",
+    "test:generate-static-site:watch": "webpack-dev-server --config ./test/manual/webpack.config.js",
+    "test:manual": "npm run test:generate-static-site:watch",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "devDependencies": {
+    "changelog-verify": "^1.1.2",
+    "css-loader": "^2.1.0",
+    "del": "^2.2.0",
+    "eslint": "^5.4.0",
+    "eslint-config-niksy": "^6.1.0",
+    "eslint-plugin-extend": "^0.1.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-mocha": "^5.1.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-unicorn": "^5.0.0",
+    "esm": "^3.0.51",
+    "globby": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "np": "^3.0.4",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^3.0.0",
+    "stylelint": "^9.2.1",
+    "stylelint-config-niksy": "^5.1.1",
+    "suitcss-components-test": "^1.0.0",
+    "version-changelog": "^3.1.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "css",
+    "reset",
+    "restart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/restart.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/restart.css/issues"
+  },
+  "homepage": "https://github.com/niksy/restart.css#readme"
 }

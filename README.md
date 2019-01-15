@@ -15,23 +15,25 @@ Goes best with screen display. Print display may (drastically) vary.
 * Borders are left on input elements so you can adjust them accordingly
 * …
 
-## Installation
+## Install
 
 ```sh
 npm install restart.css --save
-
-bower install restart.css --save
 ```
 
 ## Usage
 
-1. Include Normalize (and any other normalizing libraries such as Rationalize)
-1. Include Restart.
-1. Enjoy!
+```css
+@import url('restart.css');
+```
 
 ## Browser support
 
-Tested in IE8+ and all modern browsers.
+Tested in IE9+ and all modern browsers.
+
+## Test
+
+For manual tests, run `npm run test:manual` and open <http://localhost:9000/> in your browser.
 
 ## License
 

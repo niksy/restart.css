@@ -1,5 +1,6 @@
 .DS_Store
-.sass-cache/
 node_modules/
-bower_components/
-compiled/
+package-lock.json
+yarn.lock
+npm-debug.log
+test-dist/
